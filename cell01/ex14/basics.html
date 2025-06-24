@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>รูปภาพลิงก์</title>
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+            padding-top: 50px;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            border-bottom: 3px solid black;
+            padding-bottom: 20px;
+            margin: 0 auto 40px;
+            max-width: 680px;
+        }
+
+        .image-block {
+            text-align: center;
+            width: 320px;
+        }
+
+        .image-block p {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 300px;
+            height: auto;
+            border: 4px solid white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        img:hover {
+            opacity: 0.8;
+            transform: scale(1.03);
+        }
+
+        .footer-text {
+            position: fixed;
+            bottom: 10px;
+            right: 15px;
+            font-size: 0.7em;
+            color: black;
+            font-family: Arial, sans-serif;
+            font-style: italic;  /* ตัวเอียง */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Basics!</h1>
+
+    <div class="image-row">
+        <div class="image-block">
+            <p>Amazon</p>
+            <a href="https://www.amazon.com/" target="_blank">
+                <img src="https://m.media-amazon.com/images/I/31epF-8N9LL.png" alt="Amazon" />
+            </a>
+        </div>
+
+        <div class="image-block">
+            <p>Alibaba</p>
+            <a href="https://www.alibaba.com/" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScwjxQqIaGcLzxb_phdfc8ggTb2dba7Al3lA&s" alt="Alibaba" />
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-text">© yourlogin 2025</div>
+
+</body>
+</html>
