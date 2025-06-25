@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  background-color: #00467f;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.menu a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu li:hover > a {
+  background-color: #0066aa;
+}
+
+/* Drop-down submenu */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #0066aa;
+}
+
+.submenu li {
+  padding: 10px;
+  text-align: center;
+}
+
+.submenu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  color: #555;
+  margin-top: 40px;
+}
