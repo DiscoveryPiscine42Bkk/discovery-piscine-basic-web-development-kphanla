@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f0f0f0;
+    }
+
+    .calculator {
+      background: white;
+      padding: 30px;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <h2>Calculator</h2>
+
+    <input type="text" id="left" placeholder="Enter left number">
+    
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+
+    <input type="text" id="right" placeholder="Enter right number">
+
+    <button onclick="calculate()">Try me!</button>
+  </div>
+
+  <script>
+    function isValidNumber(n) {
+      return /^\d+$/.test(n);
+    }
+
+    function calculate() {
+      const left = document.getElementById("left").value.trim();
+      const right = document.getElementById("right").value.trim();
+      const operator = document.getElementById("operator").value;
+
+      if (!isValidNumber(left) || !isValidNumber(right)) {
+        alert("Error :(");
+        return;
+      }
+
+      const num1 = parseInt(left);
+      const num2 = parseInt(right);
+
+      if ((operator === "/" || operator === "%") && num2 === 0) {
+        alert("It's over 9000!");
+        console.log("It's over 9000!");
+        return;
+      }
+
+      let result;
+
+      switch (operator) {
+        case '+': result = num1 + num2; break;
+        case '-': result = num1 - num2; break;
+        case '*': result = num1 * num2; break;
+        case '/': result = num1 / num2; break;
+        case '%': result = num1 % num2; break;
+      }
+
+      alert(result);
+      console.log(result);
+    }
+
+    setInterval(() => {
+      alert("Please, use me...");
+    }, 30000);
+  </script>
+</body>
+</html>
