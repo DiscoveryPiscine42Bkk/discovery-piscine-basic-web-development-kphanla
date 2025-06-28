@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #0f0f0f;
+}
+
+ul {
+    list-style: none;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+}
+
+ul li {
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    padding: 20px 25px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+ul li ul.dropdown {
+    width: 200px;
+    background: #010101;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    top: 100%;
+    left: 0;
+}
+
+ul li a:hover {
+    background: #53b6dac3;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+.section {
+    padding: 50px;
+    background-color: rgba(245, 245, 245, 0.854);
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(55, 0, 255, 0.929);
+}
+
+.section h2 {
+    margin-bottom: 15px;
+    color: #030303;
+}
+
+.profile-photo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #4400ffc3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.section ul li {
+    margin: 5px 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 1000;
+}
+body {
+    padding-top: 70px; 
+}
+
+.card {
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.login {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+}
+
+.desc {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.socials img {
+    .socials img 
+    width: 24px;       
+    height: 24px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    object-fit: contain; 
+}
+
+.socials img:hover {
+    transform: scale(1.2);
+}
+
+.contact-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;
+}
